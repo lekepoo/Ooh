@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Question</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #f0f8ff;
+            overflow: hidden;
+        }
+        h1 {
+            color: #333;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute; /* Allow absolute positioning for movement */
+        }
+        .yes {
+            background-color: #4CAF50;
+            color: white;
+            top: 50%;
+            left: 40%;
+        }
+        .no {
+            background-color: #f44336;
+            color: white;
+            top: 50%;
+            left: 60%;
+            transition: all 0.3s ease; /* Smooth transition for the swipe */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tumi ki ekhon o amar kache mittha kotha bolo??</h1>
+
+    <button id="yesBtn" class="button yes" onclick="alert('Evabe dhoka dite parla?')">Yes</button>
+    <button id="noBtn" class="button no" onclick="swipeNoButton()">No</button>
+
+    <script>
+        function swipeNoButton() {
+            // Get the "No" button
+            var noBtn = document.getElementById('noBtn');
+
+            // Randomly choose new positions for the button (between 10% and 90% of viewport)
+            var randomX = Math.floor(Math.random() * 80) + 10; // Left position (10% to 90%)
+            var randomY = Math.floor(Math.random() * 80) + 10; // Top position (10% to 90%)
+
+            // Apply the new positions to swipe the button
+            noBtn.style.left = randomX + '%';
+            noBtn.style.top = randomY + '%';
+
+            // Optional: Display an alert for fun
+            //alert('You missed! Try again.');
+        }
+    </script>
+
+</body>
+</html>
