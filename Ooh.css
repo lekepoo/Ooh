@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+    background-color: #f0f8ff;
+    overflow: hidden;
+}
+
+h1 {
+    color: #333;
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute; /* Allow absolute positioning for movement */
+}
+
+.yes {
+    background-color: #4CAF50;
+    color: white;
+    top: 50%;
+    left: 40%;
+}
+
+.no {
+    background-color: #f44336;
+    color: white;
+    top: 50%;
+    left: 60%;
+    transition: all 0.3s ease; /* Smooth transition for the swipe */
+}
